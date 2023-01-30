@@ -7,16 +7,19 @@ package baseball;
       3. 각 결과를 합친다.
  */
 
-import baseball.domain.NumberGenerator;
+import baseball.domain.Judgment;
 
-import java.util.List;
+import java.util.Arrays;
 
 public class Application {
     public static void main(String[] args) {
-        NumberGenerator generator = new NumberGenerator();
-        List<Integer> numbers = generator.createRandomNumbers();
-        System.out.println(numbers);
+//        NumberGenerator generator = new NumberGenerator();
+//        List<Integer> numbers = generator.createRandomNumbers();
+//        System.out.println(numbers);
 
+        Judgment judgment = new Judgment();
+        final int count = judgment.correctCount(Arrays.asList(7, 8, 9), Arrays.asList(1, 2, 3));
+        System.out.println(count);
 
     }
 }

@@ -7,9 +7,15 @@ package baseball;
       3. 각 결과를 합친다.
  */
 
+import baseball.domain.NumberGenerator;
+
+import java.util.List;
+
 public class Application {
     public static void main(String[] args) {
-
+        NumberGenerator generator = new NumberGenerator();
+        List<Integer> numbers = generator.createRandomNumbers();
+        System.out.println(numbers);
 
 
     }

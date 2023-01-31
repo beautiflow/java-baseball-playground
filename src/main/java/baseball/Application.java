@@ -22,7 +22,7 @@ public class Application {
         Referee referee = new Referee();
 
         String result = "";
-        while (!result.equals("0 볼 3 스트라이크 ")) {
+        while (!result.equals("0 볼 3 스트라이크")) {
             result = referee.compare(computer, askNumbers());
             System.out.println(result);
         }

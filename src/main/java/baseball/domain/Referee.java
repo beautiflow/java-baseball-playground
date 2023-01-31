@@ -11,17 +11,16 @@ public class Referee {
         int correctCount = judgment.correctCount(computer, player);
 
         int strike = 0;
-        for (int placeIndex = 0; placeIndex < computer.size(); placeIndex++) {
+        for (int placeIndex = 0; placeIndex < player.size(); placeIndex++) {
             if (judgment.hasPlace(computer, placeIndex, player.get(placeIndex))) {
                 strike++;
             }
         }
         int ball = correctCount - strike;
 
-        if(strike == 0){
+        if (correctCount == 0) {
             return "아웃";
         }
-
         return ball + " 볼 " + strike + " 스트라이크 ";
     }
 }
